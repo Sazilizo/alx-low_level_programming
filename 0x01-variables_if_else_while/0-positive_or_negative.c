@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main -a program that will assign a number to n and print "negative", "positive" or "zero" depending on number
+ * main - assign number to n, print "negative","positive" or "zero" depending on number
  *
  * If : number is greater than 0 print positive
  * Else if : Number is less than 0 print negative
@@ -26,7 +26,8 @@ int main(void)
 	{
 		printf("%d is negative\n", n);
 	}
-	else{
+	else
+	{
 		printf("%d is zero\n", n);
 	}
 	return (0);
