@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - assign number to n, print "negative","positive" or "zero" depending on number
+ * main -print "negative","positive" or "zero" depending on number
  *
  * If : number is greater than 0 print positive
  * Else if : Number is less than 0 print negative
