@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 /**
  * main -a program that will assign a number to n and print "negative", "positive" or "zero" depending on number
