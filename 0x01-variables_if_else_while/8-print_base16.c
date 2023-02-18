@@ -12,7 +12,7 @@ int main(void)
 	int dig;
 	char lower;
 
-	for ( dig = '0'; dig <= '9'; dig++)
+	for (dig = '0'; dig <= '9'; dig++)
 	putchar(dig);
 	for (lower = 'a'; lower <= 'f'; lower++)
 	putchar(lower);
