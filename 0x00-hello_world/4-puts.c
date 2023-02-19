@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main  Entrty point
+ * main - prints a text to the screen
  *
  * Return: Always 0
 */
