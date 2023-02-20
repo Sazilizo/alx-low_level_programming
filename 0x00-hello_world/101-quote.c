@@ -4,8 +4,9 @@
 /**
  * main - print a quote to the screen
  *
- * fputs - a file output func , <unistd.h>, arg, stdout
- * Return : return 1
+ * fputs - a file output func, <unistd.h>, arg, stdout
+ *
+ * Return: Always 1
  */
 
 int main(void)
