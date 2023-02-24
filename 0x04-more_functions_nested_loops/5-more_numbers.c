@@ -11,16 +11,16 @@
 
 void more_numbers(void)
 {
-	char n;
-
-	for(n = 0; n <= 14; n++)
+	int n;
+	int iter = 0;
+	
+	while( iter <= 10)
 	{
-		while(n < 10)
+		for(n = 0; n < 15; n++)
 		{
 			_putchar(n);
-			n++;
 		}
-	_putchar(n);
+	iter++;
 	}
 	_putchar('\n');
 }
