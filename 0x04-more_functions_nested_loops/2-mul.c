@@ -4,8 +4,8 @@
 /**
  * mul - takes two numbers and multiplies them
  *
- * a - first number
- * b - second number
+ * a - number to multiply by
+ * b - number to be multiplied
  * Return: return the product
  */
 
