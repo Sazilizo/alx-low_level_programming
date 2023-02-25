@@ -13,6 +13,6 @@ void print_line(int c)
 
     	for (n = 0; n <= c; n++)
     	{
-	printf("_");
+	_putchar('_');
 	}
 }

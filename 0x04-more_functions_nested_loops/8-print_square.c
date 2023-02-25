@@ -16,8 +16,12 @@ void print_square(int c)
   
 	    for (b = 0; b <= c ; b++)
         {
-		printf("# ");
+		if (c <= 0)
+		{
+			_putchar('\n');
+		}
+		_putchar('#');
 	}
-		printf("\n");
+		_putchar('\n');
 	}
 }
