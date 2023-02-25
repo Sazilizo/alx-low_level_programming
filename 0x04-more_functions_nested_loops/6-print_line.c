@@ -4,6 +4,8 @@
 /**
  * print_line - prints a line depending on input
  * @c -input for number of lines
+ * @n - the iterator
+ * Return: void
  */
 
 
