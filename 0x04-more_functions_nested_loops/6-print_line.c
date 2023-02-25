@@ -3,7 +3,7 @@
 
 /**
  * print_line - prints a line depending on input
- * @c -input
+ * @c -input for number of lines
  */
 
 
@@ -11,8 +11,16 @@ void print_line(int c)
 {
     	int n;
 
-    	for (n = 0; n <= c; n++)
+    	for (n = 0; n < c; n++)
     	{
-	_putchar('_');
+		if (c  <= 0)
+		{
+			_putchar('\n');
+		}
+		else
+		{
+			_putchar('_');
+		}
 	}
+	_putchar('\n');
 }
