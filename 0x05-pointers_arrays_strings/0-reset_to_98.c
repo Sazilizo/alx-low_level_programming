@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * reset_to_98() - function that updates val to 98
+ * reset_to_98 - function that updates val to 98
  *
- * @*n- the pointer to change value
+ * @*n - the pointer to change value
  *
  * Return: void
  */
