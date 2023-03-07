@@ -1,7 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 
-/** _memset - ENtry point
+/**
+ * _memset - ENtry point
  * @s: memory address
  * @b: byte constant
  * @n: byte
