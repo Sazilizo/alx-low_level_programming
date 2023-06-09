@@ -1,34 +1,30 @@
 #include <stdio.h>
 #include <math.h>
-#include <stdlib.h>
 #define N -9
-
+#include <string.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point
- * @argc: number of arguments
- * @argv: array of arguments
- * @N: stopper
- * Return: always (0) success
+ * @argc: number of args passed
+ * @argv: array of args passed
+ * Return: aleays (0) success
  */
 
 int main(int argc, char *argv[])
 {
-	int sum;
-	int i;
-
-	sum = 1;
+	int sum, i;
 
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (*argv[i] > N && *argv[i] < '9')
-				sum *= atoi(argv[i]);
+			if (*argv[i] > N && *argv[i] <= '9')
+				sum += atoi(argv[i]);
 			else
 			{
 				printf("Error");
-				printf("\n");
+				putchar('\n');
 				return (1);
 			}
 		}
@@ -36,10 +32,11 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("Error");
-		printf("\n");
+		putchar('\n');
 		return (1);
 	}
 	printf("%d", sum);
-	printf("\n");
+	putchar('\n');
+
 	return (0);
-}	
+}
