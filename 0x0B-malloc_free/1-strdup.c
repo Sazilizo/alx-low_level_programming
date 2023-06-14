@@ -20,8 +20,7 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 	
-	for (i = 0; i < length; i++)
-		duplicate[i] = str[i];
+	strcpy(duplcate, str);
 
 	return (duplicate);
 }
