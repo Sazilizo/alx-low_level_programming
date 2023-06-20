@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * dog - astruct containing information about the dog
+ * struct dog - astruct containing information about the dog
  * @name:name of the dog
  * @age: age of dog
  * @owner: do owner
