@@ -10,12 +10,26 @@
 void print_dog(struct dog *d)
 {
 
-	if ((*d).name == NULL)
-		printf("Name: (nil)\n");
-	if ((*d).owner == NULL)
-		printf("Owner: (nil)\n");
+	struct dog *new_dog;
 
-	printf("Name: %s\n", d->name);
-	printf("Age: %f\n", d->age);
-	printf("Owner: %s\n", d->owner);
+	new_dog = malloc(sizeof(d));
+
+	if (new_dog == NULL)
+		exit (98);
+	new_dog->name = malloc(sizeof(d->name));
+	new_dog->owner = malloc(sizeof(d->owner));
+
+	if (new_dog->name == NULL)
+		new_dog->name = NULL;
+	if (new_dog->owner == NULL)
+		new_dog->owner = NULL;
+
+	new_dog->name = d->name;
+	new_dog->age = d->age;
+	new_dog->owner = d->owner;
+
+
+	printf("Name: %s\n",new_dog->name);
+	printf("Age: %f\n", new_dog->age);
+	printf("Owner: %s\n", new_dog->owner);
 }
