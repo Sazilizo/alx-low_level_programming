@@ -4,7 +4,7 @@
 #include <math.h>
 /**
  * print_dog -prints out a dog struct
- * @struct dog *d:dog structutre
+ * @struct d:dog structutre
  */
 
 void print_dog(struct dog *d)
