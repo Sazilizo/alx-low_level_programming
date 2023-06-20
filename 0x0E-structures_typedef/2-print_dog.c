@@ -20,9 +20,9 @@ void print_dog(struct dog *d)
 	new_dog->owner = malloc(sizeof(d->owner));
 
 	if (new_dog->name == NULL)
-		new_dog->name = NULL;
+		printf("Name: (nil)\n");
 	if (new_dog->owner == NULL)
-		new_dog->owner = NULL;
+		printf("Owner: (nil)\n");
 
 	new_dog->name = d->name;
 	new_dog->age = d->age;
