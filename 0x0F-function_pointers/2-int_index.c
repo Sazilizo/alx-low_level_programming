@@ -5,8 +5,8 @@
  * int_index - function that searches for an integer
  * @array: aray to search through
  * @size: size of the array
- * @cmp - callback function
- * @Return: int
+ * @cmp: callback function
+ * Return: int
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
@@ -23,8 +23,6 @@ int int_index(int *array, int size, int (*cmp)(int))
 		{
 			return (i);
 		}
-			
 	}
-
 	return (-1);
 }
