@@ -6,7 +6,7 @@
 /**
  * _strdup - create a duplicate of a string
  * @str: string feeder
- * @Return: duplicate string
+ * Return: duplicate string
  */
 
 char *_strdup(char *str)
@@ -15,11 +15,11 @@ char *_strdup(char *str)
 	unsigned int length = strlen(str) + 1;
 
 
-        duplicate = malloc(length * sizeof(char));
-
+	duplicate = malloc(length * sizeof(char));
+	if (duplicate == NULL)
+		return (NULL);
 	if (str == NULL)
 		return (NULL);
-	
 	strcpy(duplicate, str);
 
 	return (duplicate);

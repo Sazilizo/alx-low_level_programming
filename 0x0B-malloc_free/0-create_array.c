@@ -4,8 +4,8 @@
 
 /**
  * create_array - creates an array
- * *size: size of array
- * *c : input value
+ * @size: size of array
+ * @c : input value
  *
  * Return: array or NULL if empty
  */
@@ -24,6 +24,6 @@ char *create_array(unsigned int size, char c)
 
 	for (i = 0; i < size; i++)
 		array[i] = c;
-	
+
 	return (array);
 }
