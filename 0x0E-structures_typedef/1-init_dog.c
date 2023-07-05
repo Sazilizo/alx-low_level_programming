@@ -5,7 +5,8 @@
 
 /**
  * init_dog - initializes a dog struct
- * @name: pointer to name 
+ * @name: pointer to name
+ * @d: dog struct
  * @age: float age of dog
  * @owner:pointer to dog owner
  */
@@ -14,18 +15,10 @@
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 
-	struct dog *newD;
+	if (d == NULL)
+		d = malloc(sizeof(struct dog));
 
-	newD = malloc(sizeof(d) + 1);
-	newD->name = malloc(sizeof(d->name) + 2);
-	if (newD == NULL)
-		exit (98);
-	if (newD->name == NULL)
-		newD->name = NULL;
-	if (newD->owner == NULL)
-		newD->owner = NULL;
-
-	newD->name = name;
-	newD->age = age;
-	newD->owner = owner;
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
 }
