@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * printf_first - prints a sentnce before main func
+ * print_first - prints a sentnce before main func
  */
 void print_first(void) __attribute__ ((constructor));
 
