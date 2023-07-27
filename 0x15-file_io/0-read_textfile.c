@@ -1,24 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <fcntl.h>
+#include "main.h"
+/**
+ * read_textfile - reads a text file and prits to POSIX STDOUT
+ * @filename: filename to read
+ * @letters: numbers to read and print
+ * Return: numb of read (success) , 0 failure
+ */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buffer;
+	ssize_t written;
 	ssize_t fd;
-	size_t count;
-	ssize_t printedl;
+	ssize_t read_bytes;
 
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
+	if (filename == NULL)
 		return (0);
-	buffer = malloc(sizeof(char) * letters);
-	count = read(fd, buffer, letters);
-	printedl = write(STDOUT_FILENO,buffer,count);
+	fd = open(filename, O_RDONLY | O_CREAT);
+	if (fd == -1)
+	{
+		return (0);
+		perror("Program");
+	}
+	buffer = malloc(letters);
+	read_bytes = read(fd, buffer, letters);
+	if (read_bytes == -1)
+	{
+		return (0);
+		perror("Program");
+	}
+	written = write(STDOUT_FILENO, buffer, read_bytes);
 
 	free(buffer);
 	close(fd);
-
-	return(printedl);
+	return (written);
 }
