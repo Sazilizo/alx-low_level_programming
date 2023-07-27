@@ -3,15 +3,15 @@
 #include "main.h"
 
 /**
- * create_file - creates a new file
- * @filename: pointer to a file to be created with name
+ * append_text_to_file - appends text to file
+ * @filename: pointer to a file to append to
  * @text_content: A pointer pointing to content to write
  * Return: 1 success, -1 failure
  */
 
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, written, length;
+	int op, written, length;
 
 	if (filename == NULL)
 	{
@@ -25,14 +25,14 @@ int create_file(const char *filename, char *text_content)
 		}
 	}
 
-	fd = open(filename, 'a');
-	written = write(fd, text_content, length);
+	op = open(filename, O_WRONLY | O_APPEND);
+	written = write(op, text_content, length);
 	if (written == -1 || written == -1)
 	{
 		return (-1);
 	}
 
-	close(fd);
+	close(op);
 
 	return (1);
 }
