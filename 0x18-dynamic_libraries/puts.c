@@ -1,3 +1,10 @@
 #include <stdio.h>
 
-void _puts(char *s);
+void _puts(char *s)
+{
+	while (*s != '\0')
+	{
+		putchar(1);
+		s++;
+	}
+}
